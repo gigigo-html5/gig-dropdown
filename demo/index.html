@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="fragment" content="!">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Gig Component Dropdown</title>
+
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../src/gig-dropdown.html">
+
+    <style is="custom-style">
+        .dropdown-content {
+            background-color: white;
+            line-height: 20px;
+            border-radius: 3px;
+            box-shadow: 0px 2px 6px #ccc;
+        }
+        .random-content {
+            padding: 1.5em 2em;
+            max-width: 250px;
+        }
+        button {
+            border: 1px solid #ccc;
+            background-color: #eee;
+            padding: 1em;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:focus {
+            outline: none;
+            border-color: blue;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            display: block;
+            position: relative;
+            padding: 1em;
+            text-decoration: none;
+        }
+        li:not(:last-of-type) {
+            border-bottom: 1px solid #eee;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <gig-dropdown horizontal-align="right" vertical-align="top">
+        <button class="dropdown-trigger"> Show a list</button>
+        <ul class="dropdown-content" tabindex="0">
+            <li><a href="javascript:void(0)">Item 1</a></li>
+            <li><a href="javascript:void(0)">Item 2</a></li>
+            <li><a href="javascript:void(0)">Item 3</a></li>
+        </ul>
+    </gig-dropdown>
+
+    <gig-dropdown horizontal-align="left" vertical-align="top">
+        <button class="dropdown-trigger"> Show random content</button>
+        <div class="dropdown-content random-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            çreprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </gig-dropdown>
+
+</body>
+</html>

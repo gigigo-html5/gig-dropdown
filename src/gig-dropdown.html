@@ -1,0 +1,37 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-dropdown/iron-dropdown.html">
+
+<link rel="import" href="gig-dropdown-style.html">
+
+<dom-module id="gig-dropdown">
+    <template>
+        <style include="gig-dropdown-style"></style>
+
+        <div on-tap="open">
+            <content select=".dropdown-trigger"></content>
+        </div>
+
+        <iron-dropdown id="dropdown"
+                       vertical-align="[[verticalAlign]]"
+                       horizontal-align="[[horizontalAlign]]"
+                       disabled="[[disabled]]">
+            <content select=".dropdown-content"></content>
+        </iron-dropdown>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'gig-dropdown',
+
+            properties: {
+                verticalAlign: String,
+                horizontalAlign: String,
+                disabled: Boolean
+            },
+
+            open: function() {
+                this.$.dropdown.open();
+            }
+        })
+    </script>
+</dom-module>

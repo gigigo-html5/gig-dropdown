@@ -1,0 +1,32 @@
+{
+  "name": "gig-dropdown",
+  "description": "Gigigo Webcomponent to manage dropdowns",
+  "main": "gulpfile.js",
+  "authors": [
+    "Hugo Queiros"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gigigo",
+    "dropdown",
+    "polymer",
+    "webcomponent"
+  ],
+  "homepage": "https://github.com/gigigo-html5/gig-dropdown",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "web-component-tester": "^4.3.1",
+    "iron-test-helpers": "^1.2.5",
+    "webcomponentsjs": "^0.7.22"
+  },
+  "dependencies": {
+    "polymer": "^1.6.1",
+    "iron-dropdown": "^1.5.1"
+  }
+}

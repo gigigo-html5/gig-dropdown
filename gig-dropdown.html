@@ -1,0 +1,45 @@
+<!--
+ Gigigo Webcomponent to manage dropdowns
+ @version v0.0.0 - 2016-08-11
+ @link https://github.com/gigigo-html5/gig-dropdown#readme
+ @author Hugo Queiros
+ @license MIT License, http://www.opensource.org/licenses/MIT
+
+ -->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-dropdown/iron-dropdown.html">
+
+<link rel="import" href="gig-dropdown-style.html">
+
+<dom-module id="gig-dropdown">
+    <template>
+        <style include="gig-dropdown-style"></style>
+
+        <div on-tap="open">
+            <content select=".dropdown-trigger"></content>
+        </div>
+
+        <iron-dropdown id="dropdown"
+                       vertical-align="[[verticalAlign]]"
+                       horizontal-align="[[horizontalAlign]]"
+                       disabled="[[disabled]]">
+            <content select=".dropdown-content"></content>
+        </iron-dropdown>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'gig-dropdown',
+
+            properties: {
+                verticalAlign: String,
+                horizontalAlign: String,
+                disabled: Boolean
+            },
+
+            open: function() {
+                this.$.dropdown.open();
+            }
+        })
+    </script>
+</dom-module>
